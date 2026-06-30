@@ -5,8 +5,8 @@
     course: ansible
     tutor: siva
     from_place: "play level"
-  vars_files:
-  - vars_file.yaml
+  # vars_files:
+  # - vars_file.yaml
   vars_prompt:
   - name: course
     prompt: provide Course name
@@ -26,4 +26,5 @@
 # 1. Variables passed in arguments
 #   ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 -e "course=Devops" -e "tutor=siva" -e "from_place=args" 10-vars.yaml
 # 2. Variables passed at task level
-# 3. 
+# 3. variables file - separate yaml where we defined variables
+# 4. 

@@ -1,4 +1,4 @@
-- name: task level variables
+- name: vars file variables
   hosts: local
   connection: local
   vars_files:

@@ -1,5 +1,6 @@
 - name: nginx install and start
   hosts: catalogue
+  become: yes
   tasks:
     - name: install nginx
       ansible.builtin.package:

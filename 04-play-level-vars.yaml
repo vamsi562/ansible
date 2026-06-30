@@ -1,0 +1,10 @@
+- name: nginx install and start
+  hosts: local
+  connection: local
+  vars:
+    course: ansible
+    tutor: siva
+  tasks:
+  - name: var test
+    ansible.builtin.debug:
+      msg: "Course is: {{ course }} and instructor is {{ tutor }}"

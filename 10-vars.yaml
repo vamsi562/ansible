@@ -1,0 +1,27 @@
+- name: variables preferences
+  hosts: local
+  connection: local
+  vars:
+    course: ansible
+    tutor: siva
+    from_place: "play level"
+  vars_files:
+  - vars_file.yaml
+  vars_prompt:
+  - name: course
+    prompt: provide Course name
+    private: false
+  - name: tutor
+    prompt: provide tutor name
+    private: false
+  - name: from_place
+    prompt: provide variables place
+    private: false
+  tasks:
+  - name: var test
+    vars:
+      course: devops
+      tutor: cloud siva
+      from_place: "task level"
+    ansible.builtin.debug:
+      msg: "Course is: {{ course }} and instructor is {{ tutor }}, from {{ from_place }}"

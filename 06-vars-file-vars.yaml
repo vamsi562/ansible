@@ -6,4 +6,4 @@
   tasks:
   - name: var test
     ansible.builtin.debug:
-      msg: "Course is: {{ course }} and instructor is {{ tutor }}, vars from {{ from }} "
+      msg: "Course is: {{ course }} and instructor is {{ tutor }}, vars from {{ from_place }} "

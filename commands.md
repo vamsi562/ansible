@@ -39,3 +39,7 @@ ansible all -i <ip_addr>, -e ansible_user=ec2-user -e ansible_password=DevOps321
 
 
 ansible all -i <ip_addr>, -e ansible_user=ec2-user -e ansible_password=DevOps321 -b -m service -a "name=nginx state=started"
+
+### ansible playbook commands
+
+ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 01-playbook.yaml

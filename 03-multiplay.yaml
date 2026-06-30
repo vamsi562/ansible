@@ -1,11 +1,21 @@
-- name: multiplay
+- name: multiplay1
   hosts: catalogue
   tasks:
-  - name: play1
+  - name: play1 task2
     ansible.builtin.debug:
-      msg: "play1 test"
+      msg: "plaplay1 task2 test"
 
-  - name: play2
+  - name: play1 task2
     ansible.builtin.debug:
-      msg: "play2 test"
+      msg: "play1 task2 test"
 
+- name: multiplay2
+  hosts: catalogue
+  tasks:
+  - name: play2 task1
+    ansible.builtin.debug:
+      msg: "play2 task1 test"
+
+  - name: play2 task2
+    ansible.builtin.debug:
+      msg: "play2 task2 test"

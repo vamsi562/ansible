@@ -25,3 +25,13 @@
       from_place: "task level"
     ansible.builtin.debug:
       msg: "Course is: {{ course }} and instructor is {{ tutor }}, from {{ from_place }}"
+
+
+# variables prefernces 
+# 1. Variables passed in arguments
+#   ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 -e "course=Devops" -e "tutor=siva" -e "from_place=args" 10-vars.yaml
+# 2. Variables passed at task level
+# 3. Variables from file - separate yaml where variables and values defined
+# 4. variables from prompt
+# 5. variables from play level
+# 6. variables from inventory level

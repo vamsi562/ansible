@@ -1,4 +1,4 @@
-- name: "ginx install and start"
+- name: nginx install and start
   hosts: catalogue
   tasks:
     - name: install nginx
@@ -7,7 +7,7 @@
         state: present
 
     - name: Start nginx
-      ansible.builtin.package:
+      ansible.builtin.service:
         name: nginx
         state: started
         enabled: yes

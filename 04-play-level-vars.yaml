@@ -4,7 +4,8 @@
   vars:
     course: ansible
     tutor: siva
+    from: play level
   tasks:
   - name: var test
     ansible.builtin.debug:
-      msg: "Course is: {{ course }} and instructor is {{ tutor }}"
+      msg: "Course is: {{ course }} and instructor is {{ tutor }} from {{ from }}"

@@ -10,6 +10,6 @@
     vars:
       course: devops
       tutor: cloud siva
-      from: "task level"
+      from_place: "task level"
     ansible.builtin.debug:
       msg: "Course is: {{ course }} and instructor is {{ tutor }}, from {{ from_place }}"

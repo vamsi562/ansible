@@ -1,10 +1,10 @@
 - name: variables preferences
   hosts: local
   connection: local
-  vars:
-    course: ansible
-    tutor: siva
-    from_place: "play level"
+  # vars:
+  #   course: ansible
+  #   tutor: siva
+  #   from_place: "play level"
   # vars_files:
   # - vars_file.yaml
   # vars_prompt:

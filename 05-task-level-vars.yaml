@@ -4,12 +4,12 @@
   vars:
     course: ansible
     tutor: siva
-    from: play level
+    from: "play level"
   tasks:
   - name: var test
     vars:
       course: devops
       tutor: cloud siva
-      from: task level
+      from: "task level"
     ansible.builtin.debug:
       msg: "Course is: {{ course }} and instructor is {{ tutor }}, from {{ from }}"

@@ -1,0 +1,17 @@
+- name: prompt variables
+  hosts: local
+  connection: local
+  vars_prompt:
+    - name: course
+      prompt: provide Course name
+      private: false
+    - name: tutor
+      prompt: provide tutor name
+      private: false
+    - name: from_place
+      prompt: provide variables place
+      private: false
+  tasks:
+    - name: var test
+      ansible.builtin.debug:
+        msg: "Course is: {{ course }} and instructor is {{ tutor }}, vars from {{ from_place }}"

@@ -1,0 +1,13 @@
+- name: task level variables
+  hosts: local
+  connection: local
+  vars:
+    course: ansible
+    tutor: siva
+  tasks:
+  - name: var test
+    vars:
+      course: devops
+      tutor: cloud siva
+    ansible.builtin.debug:
+      msg: "Course is: {{ course }} and instructor is {{ tutor }}"

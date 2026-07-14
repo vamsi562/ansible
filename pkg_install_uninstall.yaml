@@ -1,0 +1,14 @@
+- name: Multipackage install using loops
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: Installing Packages
+    ansible.builtin.dnf:
+      name: "{{ item }}"
+      state: latest
+    loop:
+    - { name: nginx, state: latest}
+    - { name: zip, state: latest }
+    - { name: jq, state: absent }
+    - { name: docker, state: absent }

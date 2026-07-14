@@ -3,9 +3,9 @@
   connection: local
   become: yes
   tasks:
-  - name: Installing {{item}}
+  - name: Installing {{ item }}
     ansible.builtin.dnf:
-      name: {{item}}
+      name: {{ item }}
       state: latest
     loop:
     - nginx

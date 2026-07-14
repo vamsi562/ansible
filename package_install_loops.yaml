@@ -1,9 +1,9 @@
-- name: Multipackage install uding loops
+- name: Multipackage install using loops
   hosts: local
   connection: local
   become: yes
   tasks:
-  - name: Installing "{{ item }}"
+  - name: Installing Packages
     ansible.builtin.dnf:
       name: "{{ item }}"
       state: latest

@@ -1,8 +1,10 @@
 - name: Conditions
   hosts: local
   connection: local
-  vars:
-    number: 5
+  vars_prompt:
+  - name: number
+    prompt: provide number
+    private: false
   tasks:
   - name: condition check
     ansible.builtin.debug:

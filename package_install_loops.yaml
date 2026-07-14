@@ -1,0 +1,14 @@
+- name: Multipackage install uding loops
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: Installing {{item}}
+    ansible.builtin.dnf:
+      name: {{item}}
+      state: latest
+    loop:
+    - nginx
+    - python3
+    - docker
+    - jq

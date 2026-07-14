@@ -5,9 +5,8 @@
   - name: number
     prompt: provide number
     private: false
-    type: int
   tasks:
   - name: condition check
     ansible.builtin.debug:
       msg: "Given number {{ number }} less than 10"
-    when: number < 10
+    when: number|int < 10

@@ -1,6 +1,7 @@
 - name: Check facts
   hosts: local
   connection: local
+  become: yes
   tasks:
   - name: Checking  facts
     ansible.builtin.dnf:

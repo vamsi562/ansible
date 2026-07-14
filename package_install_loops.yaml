@@ -3,7 +3,7 @@
   connection: local
   become: yes
   tasks:
-  - name: Installing {{ item }}
+  - name: Installing "{{ item }}"
     ansible.builtin.dnf:
       name: "{{ item }}"
       state: latest

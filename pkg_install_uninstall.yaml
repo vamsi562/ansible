@@ -6,7 +6,7 @@
   - name: Installing Packages
     ansible.builtin.dnf:
       name: "{{ item.name }}"
-      state: "{{ item.sate }}"
+      state: "{{ item.state }}"
     loop:
     - { name: nginx, state: latest }
     - { name: zip, state: latest }

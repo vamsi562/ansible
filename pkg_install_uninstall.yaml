@@ -5,10 +5,10 @@
   tasks:
   - name: Installing Packages
     ansible.builtin.dnf:
-      name: "{{ item }}"
-      state: latest
+      name: "{{ item.name }}"
+      state: "{{ item.sate }}"
     loop:
-    - { name: nginx, state: latest}
+    - { name: nginx, state: latest }
     - { name: zip, state: latest }
     - { name: jq, state: absent }
     - { name: docker, state: absent }
